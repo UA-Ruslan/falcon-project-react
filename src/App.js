@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="app">
 			<Header setDropdownActive={setDropdownActive} setHeaderBtnHover={setHeaderBtnHover} />
-			<div className="main">
+			<main className="main">
 				<ConnectingTheCurb headerBtnHover={headerBtnHover} />
 				<SecondSection hrefId={hrefData[0].id} />
 				<ThirdSection />
@@ -32,7 +32,7 @@ function App() {
 				<SixSection />
 				<SevenSection hrefId={hrefData[4].id} />
 				<EightSection hrefId={hrefData[2].id} />
-			</div>
+			</main>
 			<Footer hrefData={hrefData} />
 			<Dropdown isDropdownActive={isDropdownActive} setDropdownActive={setDropdownActive} />
 		</div>

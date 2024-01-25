@@ -43,6 +43,11 @@ body {
 	margin: 0 auto;
 }
 
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
 .container {
 	position: relative;
 	top: 0;
