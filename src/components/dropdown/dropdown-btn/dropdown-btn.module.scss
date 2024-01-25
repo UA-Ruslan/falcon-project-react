@@ -1,0 +1,289 @@
+@import '../../../scss/variables/variables.scss';
+
+.dropdown_btn_wrapper {
+	position: fixed;
+	top: 3rem;
+	right: 3rem;
+
+	width: 5rem;
+	height: 2.9rem;
+
+	display: none;
+
+	z-index: 100;
+
+	.dropdown_btn {
+		position: relative;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		padding: 0;
+
+		border: none;
+
+		background: none;
+
+		opacity: 0.7;
+
+		transition: $hover_transition_1;
+
+		&::before,
+		&::after {
+			content: '';
+
+			position: absolute;
+			left: 0;
+
+			width: 100%;
+			height: 0.7rem;
+
+			background-color: $greyBlue;
+
+			border-radius: 0.2rem;
+
+			transition: $hover_transition_1;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			top: 1.05rem;
+		}
+
+		.btn_bottom_line {
+			position: absolute;
+			left: 0;
+			top: calc(100% - 0.7rem);
+
+			display: block;
+
+			width: 50%;
+			height: 0.7rem;
+
+			background-color: $greyBlue;
+			border-radius: 0.2rem;
+
+			transition: $hover_transition_1;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				max-width: 5rem;
+				width: 100%;
+				height: 100%;
+
+				background-color: inherit;
+
+				border-radius: 0.2rem;
+			}
+		}
+
+		&:hover {
+			opacity: 1;
+
+			transition: $hover_transition_1;
+
+			.btn_bottom_line::before {
+				animation: btn_bottom_line_hover 0.4s ease-in-out 1 forwards;
+
+				@keyframes btn_bottom_line_hover {
+					0% {
+						width: 100%;
+					}
+					50% {
+						width: 200%;
+					}
+					100% {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.dropdown_btn__first_load {
+		&::before {
+			top: -10rem;
+
+			animation: before_anim__first_load 1s linear 1 forwards;
+
+			@keyframes before_anim__first_load {
+				0% {
+					top: -10rem;
+				}
+				40% {
+					top: 1.05rem;
+				}
+				60% {
+					top: 1.05rem;
+				}
+				100% {
+					top: 0;
+				}
+			}
+		}
+
+		&::after {
+			top: -10rem;
+
+			animation: after_anim__first_load 1s linear 1 forwards;
+
+			@keyframes after_anim__first_load {
+				0% {
+					top: -10rem;
+				}
+
+				40% {
+					top: 1.05rem;
+				}
+
+				100% {
+					top: 1.05rem;
+				}
+			}
+		}
+
+		.btn_bottom_line {
+			top: -10rem;
+
+			width: 100%;
+
+			animation: btn_bottom_line_anim 2s linear 1 forwards;
+
+			@keyframes btn_bottom_line_anim {
+				0% {
+					top: -10rem;
+				}
+				20% {
+					top: 1.05rem;
+				}
+				30% {
+					top: 1.05rem;
+				}
+				50% {
+					top: calc(100% - 0.7rem);
+
+					width: 100%;
+				}
+				65% {
+					top: calc(100% - 0.7rem);
+
+					width: 100%;
+				}
+				100% {
+					top: calc(100% - 0.7rem);
+
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	.dropdown_btn__active {
+		&::before {
+			animation: before_anim__active 0.5s linear 1 forwards;
+
+			@keyframes before_anim__active {
+				0% {
+					top: 0;
+				}
+				70% {
+					top: 0.5rem;
+
+					transform: rotate(0deg);
+				}
+				100% {
+					top: 0.5rem;
+
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		&::after {
+			animation: after_anim__active 0.5s linear 1 forwards;
+
+			@keyframes after_anim__active {
+				0% {
+					top: 1.05rem;
+				}
+
+				70% {
+					top: calc(1.05rem - .6rem);
+
+					transform: rotate(0deg);
+				}
+
+				100% {
+					top: calc(1.05rem - .6rem);
+
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
+		.btn_bottom_line {
+			left: 10rem;
+		}
+	}
+
+	.dropdown_btn__inactive {
+		&::before {
+			animation: before_anim__inactive 0.5s linear 1 forwards;
+
+			@keyframes before_anim__inactive {
+				0% {
+					top: 0.5rem;
+					transform: rotate(45deg);
+				}
+				30% {
+					top: 0.5rem;
+
+					transform: rotate(0deg)
+				}
+				100% {
+					top: 0;
+
+					transform: rotate(0deg);
+				}
+			}
+		}
+
+		&::after {
+			animation: after_anim__inactive 0.5s linear 1 forwards;
+
+			@keyframes after_anim__inactive {
+				0% {
+					top: calc(1.05rem - .6rem);
+					transform: rotate(-45deg)
+				}
+
+				30% {
+					top: calc(1.05rem - .6rem);
+
+					transform: rotate(0deg);
+				}
+
+				100% {
+					top: 1.05rem;
+
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint_4) {
+	.dropdown_btn_wrapper {
+		display: block;
+	}
+}

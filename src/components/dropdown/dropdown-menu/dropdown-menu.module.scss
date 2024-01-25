@@ -1,0 +1,33 @@
+@import '../../../scss/variables/variables.scss';
+
+.dropdown_menu_wrapper {
+	position: fixed;
+	top: 0;
+	left: 100vw;
+
+	display: none;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: #ddebff;
+
+	z-index: 70;
+
+	transition: $hover_transition;
+}
+
+.active {
+	left: 0;
+
+	transition: $hover_transition;
+}
+
+
+@media screen and (max-width: $breakpoint_4) {
+	.dropdown_menu_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+}

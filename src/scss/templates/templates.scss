@@ -1,0 +1,53 @@
+%hrefParams {
+	text-decoration: none;
+	cursor: pointer;
+	color: rgba(57, 55, 55, 0.4);
+	transition: 0.4s;
+}
+
+%fontSize15 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+%fontSize18 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+%fontSize44 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 44px;
+	line-height: 50px;
+}
+
+%fontSize12 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+%hrefHover {
+	transition: $transition_0_5s;
+	&:hover {
+		color: rgba(0, 160, 162, 0.85);
+		transition: $transition_0_5s;
+		transform: translateX(5px);
+	}
+}
+
+//------------------------------------------------------------------
+
+%text_main_font_style {
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 2.4rem;
+	color: $greyBlue;
+}

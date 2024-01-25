@@ -1,0 +1,37 @@
+//--------------------------------colors
+$gray: rgba(57, 55, 55, 0.40);
+$black_gray: #393939;
+$yellow: #FFEA30;
+$black: #393737;
+$greyBlue: #70748C;
+$white: #E5E5E5;
+
+
+$whiteColor: #E5E5E5;
+$blackColor: #393737;
+$greyBlueColor: #70748C;
+$blueColor: #4E66FF;
+//--------------------------------colors###
+
+//--------------------------------transition
+$hover_transition: .2s;
+$hover_transition_1: .4s;
+$hover_transition_2: 1s;
+
+
+$transition_0_2s: 0.2s;
+$transition_0_5s: .5s;
+$transition_1s: 1s;
+//--------------------------------transition###
+
+//--------------------------------brake-points
+$max_page_width: 1440px;
+$breakpoint_6: 1280px;
+$breakpoint_5: 1024px;
+$breakpoint_4: 768px;
+$breakpoint_3: 425px;
+$breakpoint_2: 375px;
+$breakpoint_1: 320px;
+//--------------------------------brake-points###
+
+$header_height: 12rem;

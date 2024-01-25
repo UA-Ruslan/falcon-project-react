@@ -1,0 +1,81 @@
+@import '../../../scss/variables/variables.scss';
+
+.navbar_list {
+	display: flex;
+	gap: 0 4.6rem;
+
+	.navbar_list__item {
+		position: relative;
+		top: 0;
+		left: 0;
+
+		.navbar_list__link {
+			color: $gray;
+			font-size: 1.5rem;
+			font-weight: 400;
+			line-height: 2.4rem;
+			letter-spacing: 0.09rem;
+			white-space: nowrap;
+
+			transition: $hover_transition_1;
+
+			&:hover {
+				color: $greyBlue;
+
+				transition: $hover_transition_1;
+			}
+
+			&:focus {
+				color: $greyBlue;
+
+				transition: $hover_transition_1;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+
+				width: 0;
+				height: 0.2rem;
+
+				background-color: $yellow;
+				background-color: $greyBlue;
+
+				transform: translateX(-50%);
+				transition: $hover_transition_1;
+			}
+
+			&:hover::before {
+				width: 100%;
+
+				transition: $hover_transition_1;
+			}
+
+			&:focus::before {
+				width: 100%;
+
+				transition: $hover_transition_1;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $max_page_width) {
+	.navbar_list {
+		gap: 0 3.19vw;
+	}
+}
+
+@media screen and (max-width: $breakpoint_4) {
+	.navbar_list {
+		flex-direction: column;
+
+		gap: 7vw 0;
+		
+		.navbar_list__item {
+		.navbar_list__link {
+			font-size: 7vw;
+		}
+	}
+}}

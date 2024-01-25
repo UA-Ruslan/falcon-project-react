@@ -1,0 +1,164 @@
+@import '../../scss/variables/variables.scss';
+@import '../../scss/templates/templates.scss';
+
+.footerWrapper {
+  padding: 53px 102px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  .mainBlockWrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #DDEBFF;
+    margin-bottom: 20px;
+
+    .leftBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      img {
+        max-width: 44px;
+        max-height: 48px;
+        margin-bottom: 174px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $greyBlueColor;
+        margin: 20px 0;
+      }
+    }
+
+    .middleBlock {
+      display: flex;
+      flex-direction: column;
+
+      .linkStyle {
+        @extend %fontSize15;
+        color: $blackColor;
+        margin-bottom: 20px;
+        text-decoration: none;
+        margin-left: 365px;
+        cursor: pointer;
+        @extend %hrefHover;
+      }
+    }
+
+    .rightBlock {
+      display: flex;
+      flex-direction: column;
+
+      .hrefWrapper {
+        display: flex;
+
+        a {
+          @extend %fontSize15;
+          color: $blackColor;
+          text-decoration: none;
+          cursor: pointer;
+          @extend %hrefHover;
+        }
+      }
+
+      .imgWrapper {
+        margin-top: 23px;
+
+        img {
+          width: 31px;
+          height: 31px;
+          margin-right: 11px;
+          transition: $transition_0_5s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-10px);
+            transition: $transition_0_5s;
+          }
+
+          &:last-child {
+            margin-right: 11px;
+          }
+        }
+      }
+
+      .pWrapper1 {
+        p {
+          @extend %fontSize15;
+          color: $greyBlueColor;
+        }
+      }
+    }
+  }
+
+  .bottomBlockWrapper {
+    display: flex;
+
+    .bottomHrefWrapper {
+      display: flex;
+
+      .linkStyle1 {
+        @extend %fontSize12;
+        color: $greyBlueColor;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 32px;
+        @extend %hrefHover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .footerWrapper .mainBlockWrapper .middleBlock .linkStyle {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footerWrapper {
+    padding: 53px 25px;
+    text-align: center;
+
+    .mainBlockWrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .leftBlock {
+        img {
+          margin: 0 0 35px 50px;
+        }
+      }
+
+      .rightBlock {
+        .hrefWrapper {
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .bottomBlockWrapper {
+      flex-direction: column;
+      align-items: center;
+
+      .bottomHrefWrapper {
+        .linkStyle1 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+
+

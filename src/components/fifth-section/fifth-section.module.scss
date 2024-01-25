@@ -1,0 +1,117 @@
+@import '../../scss/variables/variables.scss';
+@import '../../scss/templates/templates.scss';
+
+.fifthSectionWrapper {
+  padding: 100px 102px 90px 102px;
+  display: flex;
+
+  .contentWrapper {
+    padding-left: 102px;
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 46px;
+      color: $blueColor;
+      margin: 0 75px 0 0;
+
+      span {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        &::before {
+          content: "“";
+          position: absolute;
+          top: 0;
+          left: -20px;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  .iconDescriptionWrapper {
+    display: flex;
+    align-items: flex-end;
+
+    .iconWrapper {
+      margin-right: 20px;
+    }
+
+    .pWrapper {
+      .descriptionWrapper1 {
+        p {
+          @extend %fontSize18;
+          margin: 0 0 7px 0;
+        }
+      }
+
+      .descriptionWrapper2 {
+        p {
+          @extend %fontSize15;
+          color: $greyBlueColor;
+          margin: 0 0 35px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .fifthSectionWrapper {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    .contentWrapper {
+      margin: 0 0 50px 0;
+      padding: 0;
+
+      p {
+        max-width: max-content;
+        margin: 0 auto;
+        font-size: 25px;
+        span {
+          &::before {
+            top: -6px;
+            left: -13px;
+          }
+        }
+      }
+    }
+
+    .iconDescriptionWrapper {
+      flex-direction: column;
+
+      .iconWrapper {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .fifthSectionWrapper {
+    padding: 0 25px 90px 102px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fifthSectionWrapper {
+    padding: 0 25px 90px 25px;
+    .contentWrapper {
+      p {
+        font-size: 15px;
+        line-height: 25px;
+        span {
+          &::before {
+            top: 0;
+            left: -10px;
+          }
+        }
+
+      }
+    }
+  }
+}
