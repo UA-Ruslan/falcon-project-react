@@ -44,10 +44,21 @@
 			color: $white;
 
 			background: $black_gray;
-			
+
 			border: 0.1rem solid $black_gray;
 
 			transform: scale(1.05);
+			transition: $hover_transition;
+		}
+
+		&:active {
+			color: $black_gray;
+
+			background: $gray;
+
+			border: 1px solid $gray;
+
+			transform: scale(1);
 			transition: $hover_transition;
 		}
 	}

@@ -22,17 +22,13 @@ const ConnectingTheCurb = ({ headerBtnHover }) => {
 	return (
 		<div className="container">
 			<section className={styles.section_connecting_the_curb}>
-				<AnimationOnScroll initiallyVisible={true} animateIn="animate__shakeX">
-					<h1 className={styles.connecting_the_curb__title}>Connecting the curb to new insights</h1>
-				</AnimationOnScroll>
+				<h1 className={styles.connecting_the_curb__title}>Connecting the curb to new insights</h1>
 
-				<AnimationOnScroll delay={150} initiallyVisible={true} animateIn="animate__shakeX">
-					<p className={styles.connecting_the_curb__text}>
-						Real-time curb data for smart cities. Measure <br /> occupancy, analyze demand, and manage curb
-						space
-						<br /> with the right tools.
-					</p>
-				</AnimationOnScroll>
+				<p className={styles.connecting_the_curb__text}>
+					Real-time curb data for smart cities. Measure <br /> occupancy, analyze demand, and manage curb
+					space
+					<br /> with the right tools.
+				</p>
 
 				<AnimationOnScroll delay={300} initiallyVisible={true} animateIn="animate__shakeX">
 					<button
