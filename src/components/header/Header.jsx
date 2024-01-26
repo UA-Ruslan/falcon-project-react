@@ -2,7 +2,7 @@ import styles from './header.module.scss';
 
 import sprite from '../../img/sprites/sprite.svg';
 
-import Navbar from './navbar/Navbar';
+import Navbar from '../navbar/Navbar';
 
 const Header = ({ setHeaderBtnHover, setDropdownActive }) => {
 	const onHoverHeaderBtn = () => {

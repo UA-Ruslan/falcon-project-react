@@ -5,7 +5,7 @@ import { useToggle } from './hooks/useToggle'
 import { hrefData } from './constants/href-data'
 
 import ConnectingTheCurb from './components/sections/Connecting-the-curb/Connecting-the-curb';
-import SecondSection from './components/second-section/Second-section';
+import GetToKnow from './components/sections/get-to-know/Get-to-know';
 import ThirdSection from './components/third-section/Third-section';
 import ForthSection from './components/forth-section/Forth-section';
 import FifthSection from './components/fifth-section/Fifth-section';
@@ -25,7 +25,7 @@ function App() {
 			<Header setDropdownActive={setDropdownActive} setHeaderBtnHover={setHeaderBtnHover} />
 			<main className="main">
 				<ConnectingTheCurb headerBtnHover={headerBtnHover} />
-				<SecondSection hrefId={hrefData[0].id} />
+				<GetToKnow hrefId={hrefData[0].id} />
 				<ThirdSection />
 				<ForthSection hrefId={hrefData[3].id} />
 				<FifthSection />

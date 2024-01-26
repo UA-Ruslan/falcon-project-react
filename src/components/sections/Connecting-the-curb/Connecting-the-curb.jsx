@@ -25,9 +25,8 @@ const ConnectingTheCurb = ({ headerBtnHover }) => {
 				<h1 className={styles.connecting_the_curb__title}>Connecting the curb to new insights</h1>
 
 				<p className={styles.connecting_the_curb__text}>
-					Real-time curb data for smart cities. Measure <br /> occupancy, analyze demand, and manage curb
-					space
-					<br /> with the right tools.
+					Real-time curb data for smart cities. Measure occupancy, analyze demand, and manage curb space with
+					the right tools.
 				</p>
 
 				<AnimationOnScroll delay={300} initiallyVisible={true} animateIn="animate__shakeX">

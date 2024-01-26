@@ -23,11 +23,20 @@
 	transition: $hover_transition;
 }
 
-
 @media screen and (max-width: $breakpoint_4) {
 	.dropdown_menu_wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 7rem 1rem;
+
+		overflow: auto;
+	}
 }
+
+@media screen and (max-height: 50rem) {
+	.dropdown_menu_wrapper {
+		align-items: flex-start;
+	}
 }

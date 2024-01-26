@@ -1,3 +1,5 @@
+@import '../variables/variables.scss';
+
 %hrefParams {
 	text-decoration: none;
 	cursor: pointer;
@@ -50,4 +52,42 @@
 	font-style: normal;
 	line-height: 2.4rem;
 	color: $greyBlue;
+
+	@media screen and (max-width: $breakpoint_4) {
+		& {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+%h2_common_styles {
+	color: #393737;
+	font-size: 4.4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 5rem;
+	letter-spacing: 0.132rem;
+	@media screen and (max-width: $breakpoint_4) {
+		& {
+			font-size: 2rem;
+		}
+	}
+}
+
+%button_common {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	white-space: nowrap;
+
+	cursor: pointer;
+
+	border-radius: 4px;
+
+		@media screen and (max-width: $breakpoint_4) {
+		& {
+			padding: 0 2rem;
+		}
+	}
 }
