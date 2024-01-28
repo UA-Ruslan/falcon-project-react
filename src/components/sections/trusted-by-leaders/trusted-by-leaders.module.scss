@@ -1,17 +1,17 @@
-@import '../../scss/variables/variables.scss';
-@import '../../scss/templates/templates.scss';
+@import '../../../scss/variables/variables.scss';
+@import '../../../scss/templates/templates.scss';
 
 .forthSectionWrapper {
 	padding: 81px 102px 96px 102px;
 	display: flex;
 	flex-direction: column;
 
-	.titleWrapper {
+	
 		p {
-			@extend %fontSize44;
+			@extend %h2_common_styles;
 			margin: 0 0 25px 102px;
 		}
-	}
+	
 
 	.pWrapper1 {
 		p {

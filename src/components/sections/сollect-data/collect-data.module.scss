@@ -1,0 +1,43 @@
+@import '../../../scss/variables/variables.scss';
+@import '../../../scss/templates/templates.scss';
+
+.section_collect_data {
+	padding: 5.8rem 2rem 0;
+
+	.collect_data_title {
+		@extend %h2_common_styles;
+
+		max-width: 65rem;
+
+		margin-bottom: 2.5rem;
+		padding-left: 8rem;
+	}
+
+	.collect_data_text {
+		@extend %text_main_font_style;
+
+		max-width: 30rem;
+
+		margin-bottom: 5.7rem;
+		padding-left: 8rem;
+	}
+	.collect_data__img_wrapper {
+		.collect_data__img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media screen and (max-width: $max_page_width) {
+	.section_get_to_know {
+		padding: 8.75vw 0 6.74vw 7.22vw;
+	}
+}
+
+@media screen and (max-width: $breakpoint_4) {
+	.section_collect_data {
+		padding: 5.8rem 0 0;
+	}
+}
+

@@ -6,8 +6,8 @@ import { hrefData } from './constants/href-data'
 
 import ConnectingTheCurb from './components/sections/Connecting-the-curb/Connecting-the-curb';
 import GetToKnow from './components/sections/get-to-know/Get-to-know';
-import ThirdSection from './components/third-section/Third-section';
-import ForthSection from './components/forth-section/Forth-section';
+import CollectData from './components/sections/сollect-data/Collect-data';
+import TrustedByLeaders from './components/sections/trusted-by-leaders/Trusted-by-leaders';
 import FifthSection from './components/fifth-section/Fifth-section';
 import SixSection from './components/six-section/Six-section';
 import SevenSection from './components/seven-section/Seven-section';
@@ -26,14 +26,14 @@ function App() {
 			<main className="main">
 				<ConnectingTheCurb headerBtnHover={headerBtnHover} />
 				<GetToKnow hrefId={hrefData[0].id} />
-				<ThirdSection />
-				<ForthSection hrefId={hrefData[3].id} />
-				<FifthSection />
+				<CollectData />
+				<TrustedByLeaders hrefId={hrefData[3].id} />
+				{/*<FifthSection />
 				<SixSection />
 				<SevenSection hrefId={hrefData[4].id} />
-				<EightSection hrefId={hrefData[2].id} />
+				<EightSection hrefId={hrefData[2].id} /> */}
 			</main>
-			<Footer hrefData={hrefData} />
+			{/* <Footer hrefData={hrefData} /> */}
 			<Dropdown isDropdownActive={isDropdownActive} setDropdownActive={setDropdownActive} />
 		</div>
 	);
