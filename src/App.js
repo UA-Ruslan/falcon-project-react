@@ -1,13 +1,13 @@
 import './app.scss';
 
-import { useToggle } from './hooks/useToggle'
+import { useToggle } from './hooks/useToggle';
 
-import { hrefData } from './constants/href-data'
+import { staticData } from './static-data/static-data';
 
 import ConnectingTheCurb from './components/sections/Connecting-the-curb/Connecting-the-curb';
 import GetToKnow from './components/sections/get-to-know/Get-to-know';
-import CollectData from './components/sections/сollect-data/Collect-data';
-import TrustedByLeaders from './components/sections/trusted-by-leaders/Trusted-by-leaders';
+import CollectData from './components/sections/collect-data/Collect-data'
+import TrustedByLeaders from './components/sections/trusted-by-leaders/Trusted-by-leaders'
 import FifthSection from './components/fifth-section/Fifth-section';
 import SixSection from './components/six-section/Six-section';
 import SevenSection from './components/seven-section/Seven-section';
@@ -25,15 +25,15 @@ function App() {
 			<Header setDropdownActive={setDropdownActive} setHeaderBtnHover={setHeaderBtnHover} />
 			<main className="main">
 				<ConnectingTheCurb headerBtnHover={headerBtnHover} />
-				<GetToKnow hrefId={hrefData[0].id} />
+				<GetToKnow hrefId={staticData.hrefData[0].id} />
 				<CollectData />
-				<TrustedByLeaders hrefId={hrefData[3].id} />
-				{/*<FifthSection />
+				<TrustedByLeaders hrefId={staticData.hrefData[3].id} />
+				<FifthSection />
 				<SixSection />
-				<SevenSection hrefId={hrefData[4].id} />
-				<EightSection hrefId={hrefData[2].id} /> */}
+				<SevenSection hrefId={staticData.hrefData[4].id} />
+				<EightSection hrefId={staticData.hrefData[2].id} />
 			</main>
-			{/* <Footer hrefData={hrefData} /> */}
+			<Footer hrefData={staticData.hrefData} />
 			<Dropdown isDropdownActive={isDropdownActive} setDropdownActive={setDropdownActive} />
 		</div>
 	);

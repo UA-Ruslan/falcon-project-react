@@ -2,38 +2,17 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './get-to-know.module.scss';
 
+import { staticData } from '../../../static-data/static-data'
+
 import camera from '../../../img/sections/get-to-know/camera.webp';
 import sun from '../../../img/sections/get-to-know/sun-ray.webp';
 import record from '../../../img/sections/get-to-know/record.webp';
-
-import sprite from '../../../img/sprites/sprite.svg';
 
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const GetToKnow = ({ hrefId }) => {
 	const [isSunActive, setSunActive] = useState(false);
 	const [isRecordActive, setRecordActive] = useState(false);
-
-	const cartData = [
-		{
-			path: `${sprite}#wireless`,
-			title: 'Fully wireless hardware',
-			content:
-				'We provide solar and cellular cameras that work anywhere, operate 24/7, and take under 10 minutes to install.',
-		},
-		{
-			path: `${sprite}#real_time_data`,
-			title: 'Real-time data',
-			content:
-				`Measure availability and compliance in real-time with our powerful and accurate computer vision pipeline.`,
-		},
-		{
-			path: `${sprite}#full_service`,
-			title: 'Full service subscription',
-			content:
-				'One subscription for the cameras, installation, maintenance, implementation, software, and support.',
-		},
-	];
 
 	useEffect(() => {
 		let intervalId;
@@ -76,13 +55,13 @@ const GetToKnow = ({ hrefId }) => {
 						</AnimationOnScroll>
 					</article>
 					<article className={styles.get_to_know__right_block}>
-							<img
-								className={styles.get_to_know__camera_img}
-								src={camera}
-								width={642}
-								height={414}
-								alt="cameraImg"
-							/>
+						<img
+							className={styles.get_to_know__camera_img}
+							src={camera}
+							width={642}
+							height={414}
+							alt="cameraImg"
+						/>
 						<div
 							className={
 								!isSunActive
@@ -113,7 +92,7 @@ const GetToKnow = ({ hrefId }) => {
 				</div>
 
 				<div className={styles.bottom_content_wrapper}>
-					{cartData.map((el, index) => {
+					{staticData.cartData.map((el, index) => {
 						const isSecondItem = index === 1;
 						return (
 							<article key={index} className={styles.bottom_content__card_item}>

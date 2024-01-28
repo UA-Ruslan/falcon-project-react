@@ -1,7 +1,7 @@
 import styles from './navbar.module.scss';
-import { hrefData } from '../../constants/href-data';
+import { staticData } from '../../static-data/static-data';
 const Navbar = ({ setDropdownActive }) => {
-	const hrefList = hrefData.map((el) => {
+	const hrefList = staticData.hrefData.map((el) => {
 		const closeDropdown = () => {
 			setDropdownActive(false);
 		};

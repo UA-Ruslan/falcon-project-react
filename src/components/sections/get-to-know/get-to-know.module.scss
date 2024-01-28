@@ -183,11 +183,9 @@
 				}
 
 				.card_item__title {
-					@extend %fontSize18;
+					@extend %text__fz_18__black;
 
-					margin: 0 0 21px 0;
-
-					color: $blackColor;
+					margin-bottom: 2.1rem;
 				}
 
 				.card_item__text {

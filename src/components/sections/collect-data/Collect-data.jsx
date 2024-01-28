@@ -1,6 +1,6 @@
 import styles from './collect-data.module.scss';
 
-import maiImg from '../../../img/sections/collect-data/collect-data.webp';
+import collectDataImg from '../../../img/sections/collect-data/collect-data.webp';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const CollectData = () => {
@@ -17,10 +17,10 @@ const CollectData = () => {
 					<div className={styles.collect_data__img_wrapper}>
 						<img
 							className={styles.collect_data__img}
-							src={maiImg}
+							src={collectDataImg}
 							width="100%"
 							height="auto"
-							alt="maiImg"
+							alt="Demonstration"
 						/>
 					</div>
 				</section>

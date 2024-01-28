@@ -2,6 +2,9 @@
 @import '../../../scss/templates/templates.scss';
 
 .section_collect_data {
+	display: flex;
+	flex-direction: column;
+	
 	padding: 5.8rem 2rem 0;
 
 	.collect_data_title {
@@ -10,7 +13,7 @@
 		max-width: 65rem;
 
 		margin-bottom: 2.5rem;
-		padding-left: 8rem;
+		padding-left: 8.4rem;
 	}
 
 	.collect_data_text {
@@ -30,14 +33,36 @@
 }
 
 @media screen and (max-width: $max_page_width) {
-	.section_get_to_know {
-		padding: 8.75vw 0 6.74vw 7.22vw;
+	.section_collect_data {
+		padding: 4.2vw 1.38vw 0;
+		.collect_data_title {
+			padding-left: 5.83vw;
+		}
+
+		.collect_data_text {
+			padding-left: 5.83vw;
+		}
 	}
 }
 
 @media screen and (max-width: $breakpoint_4) {
 	.section_collect_data {
+		align-items: center;
+
 		padding: 5.8rem 0 0;
+
+		text-align: center;
+
+		.collect_data_title {
+			margin-bottom: 3.25vw;
+			padding-left: 0;
+
+			line-height: 2.5rem;
+		}
+
+		.collect_data_text {
+			margin-bottom: 7.42vw;
+			padding-left: 0;
+		}
 	}
 }
-
