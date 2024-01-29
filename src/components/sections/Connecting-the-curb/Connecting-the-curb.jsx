@@ -34,6 +34,7 @@ const ConnectingTheCurb = ({ headerBtnHover }) => {
 						onMouseOver={mouseOverBookADemo}
 						onMouseOut={mouseOutBookADemo}
 						className={styles.btn_book_a_demo}
+						type='button'
 					>
 						Book a demo
 					</button>

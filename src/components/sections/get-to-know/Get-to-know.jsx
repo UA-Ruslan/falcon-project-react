@@ -49,7 +49,7 @@ const GetToKnow = ({ hrefId }) => {
 						</p>
 
 						<AnimationOnScroll initiallyVisible={true} animateIn="animate__rubberBand">
-							<button onMouseOver={sunActive} onMouseOut={sunInactive} className={styles.btn_more_about}>
+							<button onMouseOver={sunActive} onMouseOut={sunInactive} className={styles.btn_more_about} type='button'>
 								More about our technology
 							</button>
 						</AnimationOnScroll>

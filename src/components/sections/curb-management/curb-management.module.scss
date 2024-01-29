@@ -1,0 +1,147 @@
+@import '../../../scss/variables/variables.scss';
+@import '../../../scss/templates/templates.scss';
+
+.section_curb_management {
+	padding: 8.3rem 10.4rem 18.4rem;
+	display: flex;
+	align-items: flex-end;
+
+	.curb_management__text_content {
+		max-width: 58.6rem;
+
+		padding-bottom: 1.1rem;
+
+		font-size: 3.2rem;
+		font-weight: 400;
+		line-height: 4.6rem;
+		letter-spacing: 0.32px;
+
+		color: $blue;
+
+		.text_content__before_position {
+			position: relative;
+
+			&::before {
+				content: '“';
+				position: absolute;
+				top: -0.4rem;
+				left: -1.8rem;
+			}
+		}
+	}
+
+	.curb_management__logo_wrapper {
+		display: flex;
+		align-items: center;
+
+		height: 13.8rem;
+
+		padding-left: 7.5rem;
+
+		.curb_management__logo {
+			width: 13.8rem;
+			height: 13.8rem;
+		}
+
+		.curb_management__logo_content {
+			display: flex;
+			flex-direction: column;
+			.curb_management__logo_title {
+				margin-bottom: 0.7rem;
+				padding-left: 2rem;
+
+				font-size: 1.8rem;
+				font-weight: 400;
+				line-height: 2.8rem;
+
+				color: $black;
+			}
+			.curb_management__logo_text {
+				@extend %text_main_font_style;
+
+				padding-left: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $max_page_width) {
+	.section_curb_management {
+		padding: 5.76vw 7.22vw 12.7vw;
+
+		.curb_management__logo_wrapper {
+			padding-left: 5.2vw;
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint_6) {
+	.section_curb_management {
+		flex-direction: column-reverse;
+		align-items: center;
+
+		text-align: center;
+
+		.curb_management__text_content {
+			padding-bottom: 0;
+		}
+
+		.curb_management__logo_wrapper {
+			flex-direction: column;
+
+			height: min-content;
+
+			margin-bottom: 2rem;
+			padding-left: 0;
+
+			.curb_management__logo {
+				margin-bottom: 2rem;
+			}
+
+			.curb_management__logo_content {
+				.curb_management__logo_title {
+					padding-left: 0;
+				}
+
+				.curb_management__logo_text {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint_4) {
+	.section_curb_management {
+		.curb_management__text_content {
+			font-size: 4.16vw;
+			line-height: 5.98vw;
+
+			.text_content__before_position::before {
+				top: -1.04vw;
+				left: -1.23vw;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $breakpoint_3) {
+	.section_curb_management {
+		.curb_management__text_content {
+			font-size: 1.5rem;
+			line-height: 1.7rem;
+
+			.text_content__before_position::before {
+				top: -0.2rem;
+				left: -0.4rem;
+			}
+		}
+
+		.curb_management__logo_wrapper {
+			.curb_management__logo {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	}
+}

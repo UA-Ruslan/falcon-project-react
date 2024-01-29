@@ -8,8 +8,8 @@ import ConnectingTheCurb from './components/sections/Connecting-the-curb/Connect
 import GetToKnow from './components/sections/get-to-know/Get-to-know';
 import CollectData from './components/sections/collect-data/Collect-data'
 import TrustedByLeaders from './components/sections/trusted-by-leaders/Trusted-by-leaders'
-import FifthSection from './components/fifth-section/Fifth-section';
-import SixSection from './components/six-section/Six-section';
+import CurbManagement from './components/sections/curb-management/Curb-management';
+import PowerUp from './components/sections/power-up/Power-up';
 import SevenSection from './components/seven-section/Seven-section';
 import EightSection from './components/eigh-section/Eight-section';
 import Footer from './components/footer/Footer';
@@ -28,8 +28,8 @@ function App() {
 				<GetToKnow hrefId={staticData.hrefData[0].id} />
 				<CollectData />
 				<TrustedByLeaders hrefId={staticData.hrefData[3].id} />
-				<FifthSection />
-				<SixSection />
+				<CurbManagement />
+				<PowerUp />
 				<SevenSection hrefId={staticData.hrefData[4].id} />
 				<EightSection hrefId={staticData.hrefData[2].id} />
 			</main>
