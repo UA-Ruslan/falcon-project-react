@@ -77,6 +77,10 @@
 				&::placeholder {
 					color: #00000038;
 				}
+
+				&:-internal-autofill-selected {
+					background-color: red !important;
+				}
 			}
 
 			.form__input_text_error {
