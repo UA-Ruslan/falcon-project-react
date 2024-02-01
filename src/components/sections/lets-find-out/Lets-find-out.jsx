@@ -7,6 +7,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const SignupSchema = Yup.object().shape({
 	name: Yup.string()
+		.matches(/^[a-zA-Z]+$/, 'Only Latin letters are allowed')
 		.min(2, 'At least 2 characters')
 		.max(30, '30 characters maximum')
 		.required('Required field'),
