@@ -1,14 +1,14 @@
 @import '../../../scss/variables/variables.scss';
 @import '../../../scss/templates/templates.scss';
 
-.section_get_to_know {
-	display: flex;
-	flex-direction: column;
+.container__get_to_know {
 	background: $white_gray;
 
-	padding: 12.6rem 0 9.7rem 10.4rem;
-	.container__get_to_know {
-		overflow: visible;
+	.section_get_to_know {
+		display: flex;
+		flex-direction: column;
+
+		padding: 12.6rem 0 9.7rem 10.4rem;
 
 		.top_content_wrapper {
 			display: flex;
@@ -55,7 +55,7 @@
 					&:hover {
 						background-color: $black;
 
-						color: $whiteColor;
+						color: $white;
 
 						transform: scale(1.1);
 						transition: $hover_transition;
@@ -101,7 +101,7 @@
 					border-radius: 50%;
 
 					opacity: 0;
-					transition: $transition_0_5s;
+					transition: $hover_transition_1;
 
 					.get_to_know__sun {
 						position: absolute;
@@ -205,15 +205,18 @@
 }
 
 @media screen and (max-width: $max_page_width) {
-	.section_get_to_know {
-		padding: 8.75vw 0 6.74vw 7.22vw;
+	.container__get_to_know {
+		.section_get_to_know {
+			padding: 8.75vw 0 6.74vw 7.22vw;
+		}
 	}
 }
 
 @media screen and (max-width: $breakpoint_4) {
-	.section_get_to_know {
-		padding: 9rem 0 5rem 0;
-		.container__get_to_know {
+	.container__get_to_know {
+		.section_get_to_know {
+			padding: 9rem 0 5rem 0;
+
 			.top_content_wrapper {
 				flex-direction: column-reverse;
 				align-items: center;
@@ -239,9 +242,10 @@
 
 				text-align: center;
 
-				.bottom_content__card_item {
+				.bottom_content__card_item:nth-child(odd),
+				.bottom_content__card_item:nth-child(even) {
 					padding: 2rem 0;
-					margin: 0 !important;
+					margin: 0;
 				}
 			}
 		}

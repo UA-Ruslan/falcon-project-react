@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './get-to-know.module.scss';
 
-import { staticData } from '../../../static-data/static-data'
+import { staticData } from '../../../static-data/static-data';
 
 import camera from '../../../img/sections/get-to-know/camera.webp';
 import sun from '../../../img/sections/get-to-know/sun-ray.webp';
@@ -37,8 +37,8 @@ const GetToKnow = ({ hrefId }) => {
 		setRecordActive(false);
 	};
 	return (
-		<section id={hrefId} className={styles.section_get_to_know}>
-			<div className={`${styles.container__get_to_know} container`}>
+		<div className={`container ${styles.container__get_to_know}`}>
+			<section id={hrefId} className={styles.section_get_to_know}>
 				<div className={styles.top_content_wrapper}>
 					<article className={styles.get_to_know__left_block}>
 						<h2 className={styles.get_to_know__title}>Get to know the curb better</h2>
@@ -49,7 +49,12 @@ const GetToKnow = ({ hrefId }) => {
 						</p>
 
 						<AnimationOnScroll initiallyVisible={true} animateIn="animate__rubberBand">
-							<button onMouseOver={sunActive} onMouseOut={sunInactive} className={styles.btn_more_about} type='button'>
+							<button
+								onMouseOver={sunActive}
+								onMouseOut={sunInactive}
+								className={styles.btn_more_about}
+								type="button"
+							>
 								More about our technology
 							</button>
 						</AnimationOnScroll>
@@ -117,8 +122,8 @@ const GetToKnow = ({ hrefId }) => {
 						);
 					})}
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	);
 };
 

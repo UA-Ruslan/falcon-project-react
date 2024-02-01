@@ -1,90 +1,86 @@
 @import '../../../scss/variables/variables.scss';
 @import '../../../scss/templates/templates.scss';
 
-.power_up__section_wrapper {
-	padding: 6.4rem 0 7.7rem;
-
+.power_up_container {
 	background: #f0f8ff url('../../../img/sections/power-up/power-up-bg.svg') 50% / cover no-repeat;
 
-	.power_up_container {
-		overflow: visible;
+	.section_power_up {
+		display: flex;
+		justify-content: space-between;
 
-		.section_power_up {
+		padding: 6.4rem 0 7.7rem;
+
+		.power_up__left_block {
 			display: flex;
-			justify-content: space-between;
+			flex-direction: column;
 
-			.power_up__left_block {
-				display: flex;
-				flex-direction: column;
+			.left_block__title {
+				margin-bottom: 12.4rem;
 
-				.left_block__title {
-					margin-bottom: 12.4rem;
+				max-width: 46rem;
 
-					max-width: 46rem;
+				font-weight: 400;
+				font-size: 9.6rem;
+				line-height: 10.1rem;
+				letter-spacing: 0.384rem;
 
-					font-weight: 400;
-					font-size: 9.6rem;
-					line-height: 10.1rem;
-					letter-spacing: 0.384rem;
-
-					color: $blue;
-				}
-
-				.left_block__text {
-					@extend %text_main_font_style;
-
-					max-width: 33rem;
-
-					color: $blue;
-				}
+				color: $blue;
 			}
 
-			.power_up__right_block {
-				padding-right: 5.8rem;
-				align-self: flex-end;
+			.left_block__text {
+				@extend %text_main_font_style;
 
-				.right_block__text {
-					@extend %text__fz_18__black;
-					margin-bottom: 3.3rem;
+				max-width: 33rem;
 
-					max-width: 25rem;
+				color: $blue;
+			}
+		}
 
+		.power_up__right_block {
+			padding-right: 5.8rem;
+			align-self: flex-end;
+
+			.right_block__text {
+				@extend %text__fz_18__black;
+				margin-bottom: 3.3rem;
+
+				max-width: 25rem;
+
+				color: $blue;
+			}
+
+			.right_block__btn {
+				@extend %button_common;
+
+				max-width: 19.5rem;
+				width: 100%;
+				height: 68px;
+
+				background-color: $blue;
+				color: $white;
+
+				border: 1px solid $blue;
+
+				transition: $hover_transition;
+
+				&:hover {
+					background-color: #f0f8ff;
 					color: $blue;
+
+					border: 0.1rem solid $blue;
+
+					transform: scale(1.1);
+					transition: $hover_transition;
 				}
 
-				.right_block__btn {
-					@extend %button_common;
-
-					max-width: 19.5rem;
-					width: 100%;
-					height: 68px;
-
-					background-color: $blue;
+				&:active {
+					background: $blue;
 					color: $white;
 
-					border: 1px solid $blue;
+					border: 0.1rem solid $blue;
 
-					transition: $transition_0_2s;
-
-					&:hover {
-						background-color: #f0f8ff;
-						color: $blue;
-
-						border: 0.1rem solid $blue;
-
-						transform: scale(1.1);
-						transition: $hover_transition;
-					}
-
-					&:active {
-						background: $blue;
-						color: $white;
-
-						border: 0.1rem solid $blue;
-
-						transform: scale(1.05);
-						transition: $hover_transition;
-					}
+					transform: scale(1.05);
+					transition: $hover_transition;
 				}
 			}
 		}
@@ -92,62 +88,60 @@
 }
 
 @media screen and (max-width: $max_page_width) {
-	.power_up__section_wrapper {
-		padding: 4.44vw 0 5.34vw;
+	.power_up_container {
+		.section_power_up {
+			padding: 4.44vw 0 5.34vw;
+		}
 	}
 }
 
 @media screen and (max-width: $breakpoint_5) {
-	.power_up__section_wrapper {
-		.power_up_container {
-			.section_power_up {
-				.power_up__left_block {
-					.left_block__title {
-						margin-bottom: 3rem;
+	.power_up_container {
+		.section_power_up {
+			.power_up__left_block {
+				.left_block__title {
+					margin-bottom: 3rem;
 
-						font-size: 9.3vw;
-						line-height: 9.6vw;
-					}
+					font-size: 9.3vw;
+					line-height: 9.6vw;
 				}
+			}
 
-				.power_up__right_block {
-					padding-right: 0;
-				}
+			.power_up__right_block {
+				padding-right: 0;
 			}
 		}
 	}
 }
 
 @media screen and (max-width: $breakpoint_4) {
-	.power_up__section_wrapper {
-		.power_up_container {
-			.section_power_up {
-				flex-direction: column;
-				justify-content: flex-start;
+	.power_up_container {
+		.section_power_up {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+
+			text-align: center;
+
+			.power_up__left_block {
 				align-items: center;
 
-				text-align: center;
-
-				.power_up__left_block {
-					align-items: center;
-
-					.left_block__title {
-						font-size: 9.3vw;
-						line-height: 9.6vw;
-					}
-					.left_block__text {
-						margin-bottom: 3rem;
-					}
+				.left_block__title {
+					font-size: 9.3vw;
+					line-height: 9.6vw;
 				}
-				.power_up__right_block {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					align-self: center;
+				.left_block__text {
+					margin-bottom: 3rem;
+				}
+			}
+			.power_up__right_block {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				align-self: center;
 
-					.right_block__btn {
-						height: 4rem;
-					}
+				.right_block__btn {
+					height: 4rem;
 				}
 			}
 		}

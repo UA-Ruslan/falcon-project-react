@@ -10,8 +10,8 @@ import CollectData from './components/sections/collect-data/Collect-data'
 import TrustedByLeaders from './components/sections/trusted-by-leaders/Trusted-by-leaders'
 import CurbManagement from './components/sections/curb-management/Curb-management';
 import PowerUp from './components/sections/power-up/Power-up';
-import SevenSection from './components/seven-section/Seven-section';
-import EightSection from './components/eigh-section/Eight-section';
+import OurBlog from './components/sections/our-blog/Our-blog';
+import EightSection from './components/sections/lets-find-out/Lets-find-out';
 import Footer from './components/footer/Footer';
 import Dropdown from './components/dropdown/Dropdown';
 import Header from './components/header/Header';
@@ -30,7 +30,7 @@ function App() {
 				<TrustedByLeaders hrefId={staticData.hrefData[3].id} />
 				<CurbManagement />
 				<PowerUp />
-				<SevenSection hrefId={staticData.hrefData[4].id} />
+				<OurBlog hrefId={staticData.hrefData[4].id} />
 				<EightSection hrefId={staticData.hrefData[2].id} />
 			</main>
 			<Footer hrefData={staticData.hrefData} />

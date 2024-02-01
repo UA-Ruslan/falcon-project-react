@@ -1,68 +1,92 @@
-import React from "react";
-import style from "./footer.module.scss";
-import mainIcon from "../../img/footer/v_icon.webp"
-import facebook from "../../img/footer/facebook.webp"
-import instagram from "../../img/footer/instagram.webp"
-import twitter from "../../img/footer/twitter.webp"
-import inImg from "../../img/footer/in_icon.webp"
-import {AnimationOnScroll} from 'react-animation-on-scroll';
+import React from 'react';
+import styles from './footer.module.scss';
 
+import { staticData } from '../../static-data/static-data';
+
+import sprite from '../../img/sprites/sprite.svg';
+
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Footer = ({ hrefData }) => {
 	return (
 		<AnimationOnScroll animateIn="animate__zoomInDown">
-			<div id={hrefData[1].id} className={style.footerWrapper}>
-				<div className={style.mainBlockWrapper}>
-					<div className={style.leftBlock}>
-						<img src={mainIcon} alt="mainIcon" />
-						<p>© 2021 VADE Group Inc.</p>
-					</div>
-					<div className={style.middleBlock}>
-						<a className={style.linkStyle} href={`#${hrefData[0].id}`}>
-							technology
-						</a>
-						<a className={style.linkStyle} href={`#${hrefData[2].id}`}>
-							impact
-						</a>
-						<a className={style.linkStyle} href={`#${hrefData[3].id}`}>
-							portfolio
-						</a>
-						<a className={style.linkStyle} href={`#${hrefData[4].id}`}>
-							blog
-						</a>
-					</div>
-					<div className={style.rightBlock}>
-						<div className={style.hrefWrapper}>
-							<a href="/">team@vade.ai</a>
+			<div className="container">
+				<footer id={hrefData[1].id} className={styles.footer}>
+					<div className={styles.footer_main_content}>
+						<div className={styles.footer__logo_wrapper}>
+							<a className={styles.footer__logo_link} href="/">
+								<svg className={styles.footer__logo}>
+									<use xlinkHref={`${sprite}#footer_logo`} />
+								</svg>
+							</a>
 						</div>
-						<div className={style.imgWrapper}>
-							<img src={facebook} width="100%" height="100%" alt="facebook" />
-							<img src={instagram} width="100%" height="100%" alt="instagram" />
-							<img src={twitter} width="100%" height="100%" alt="twitter" />
-							<img src={inImg} width="100%" height="100%" alt="inImg" />
-						</div>
-						<div className={style.pWrapper1}>
-							<p>
-								16 W Martin St. Suite <br /> 1101, Raleigh, NC 27601
-							</p>
-						</div>
-					</div>
-				</div>
 
-				<div className={style.bottomBlockWrapper}>
-					<div className={style.bottomHrefWrapper}>
-						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-						<a href="#" className={style.linkStyle1}>
-							privacy policy
-						</a>
+						<div className={styles.nav_address_wrapper}>
+							<nav className={styles.nav}>
+								<ul className={styles.nav_list}>
+									{staticData.footerData.footerNavData.map((el, index) => {
+										return (
+											<li key={index} className={styles.nav_list__item}>
+												<a className={styles.nav_list__item__link} href={el.href}>
+													{el.linkTitle}
+												</a>
+											</li>
+										);
+									})}
+								</ul>
+							</nav>
+
+							<address className={styles.address}>
+								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+								<a href="#" className={styles.address__our_team}>
+									team@vade.ai
+								</a>
+								<ul className={styles.social_networks_list}>
+									{staticData.footerData.footerSocialNetworksData.map((el, index) => {
+										return (
+											<li key={index} className={styles.social_network__list_item}>
+												<a
+													target="_blank"
+													rel="noreferrer"
+													href={el.link}
+													className={styles.social_network__list_link}
+												>
+													<svg className={styles.social_network__list_icon}>
+														<use xlinkHref={el.svgSprite} />
+													</svg>
+												</a>
+											</li>
+										);
+									})}
+								</ul>
+								<span className={styles.physical_address}>16 W Martin St. Suite 1101, Raleigh, NC 27601</span>
+							</address>
+						</div>
 					</div>
-					<div className={style.bottomHrefWrapper}>
-						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-						<a href="#" className={style.linkStyle1}>
-							terms of use
-						</a>
-					</div>
-				</div>
+
+					<article className={styles.additional_info}>
+						<span className={`${styles.additional_info__about_us} ${styles.additional_info__font_common}`}>
+							© 2021 VADE Group Inc.
+						</span>
+						<hr className={styles.additional_info__line} />
+						<div className={styles.additional_info__privacy_policy}>
+							{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+							<a
+								href="#"
+								className={`${styles.additional_info__link} ${styles.additional_info__font_common}`}
+							>
+								privacy policy
+							</a>
+							{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+							<a
+								href="#"
+								className={`${styles.additional_info__link} ${styles.additional_info__font_common}`}
+							>
+								terms of use
+							</a>
+						</div>
+					</article>
+				</footer>
 			</div>
 		</AnimationOnScroll>
 	);
