@@ -45,17 +45,30 @@
 
 		transition: $hover_transition;
 
-		&:hover {
-			color: $white;
+		@media (hover: hover) {
+			&:hover {
+				color: $white;
 
-			background: $black_gray;
+				background: $black_gray;
 
-			border: 0.1rem solid $black_gray;
+				border: 0.1rem solid $black_gray;
 
-			transform: scale(1.05);
-			transition: $hover_transition;
+				transform: scale(1.05);
+				transition: $hover_transition;
+			}
 		}
+		@media (hover: none) {
+			&:active {
+				color: $black_gray;
 
+				background: $gray;
+
+				border: 1px solid $gray;
+
+				transform: scale(1);
+				transition: $hover_transition;
+			}
+		}
 		&:active {
 			color: $black_gray;
 

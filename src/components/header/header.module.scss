@@ -96,20 +96,33 @@
 
 				transition: $hover_transition;
 
-				&:hover {
-					color: $white;
-					background-color: $gray;
+				@media (hover: hover) {
+					&:hover {
+						color: $white;
+						background-color: $gray;
 
-					border: transparent;
-					border-radius: .6rem;
+						border: transparent;
+						border-radius: 0.6rem;
 
-					transform: scale(1.1);
-					transition: $hover_transition;
+						transform: scale(1.1);
+						transition: $hover_transition;
+					}
 				}
+				@media (hover: none) {
+					&:active {
+						color: $gray;
+						background-color: rgba(57, 55, 55, 0.157);
 
+						border-radius: 0.6rem;
+						border: 1px solid transparent;
+
+						transform: scale(1.05);
+						transition: $hover_transition;
+					}
+				}
 				&:active {
 					color: $gray;
-					background-color: rgba(57, 55, 55, 0.157);;
+					background-color: rgba(57, 55, 55, 0.157);
 
 					border-radius: 0.6rem;
 

@@ -4,7 +4,7 @@ import { useToggle } from './hooks/useToggle';
 
 import { staticData } from './static-data/static-data';
 
-import ConnectingTheCurb from './components/sections/Connecting-the-curb/Connecting-the-curb';
+import ConnectingTheCurb from './components/sections/connecting-the-curb/Connecting-the-curb';
 import GetToKnow from './components/sections/get-to-know/Get-to-know';
 import CollectData from './components/sections/collect-data/Collect-data'
 import TrustedByLeaders from './components/sections/trusted-by-leaders/Trusted-by-leaders'
