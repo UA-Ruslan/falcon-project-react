@@ -12,29 +12,12 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const GetToKnow = ({ hrefId }) => {
 	const [isSunActive, setSunActive] = useState(false);
-	const [isRecordActive, setRecordActive] = useState(false);
 
-	useEffect(() => {
-		let intervalId;
-		if (isSunActive) {
-			intervalId = setInterval(() => {
-				setRecordActive((prev) => !prev);
-				setTimeout(() => {
-					setRecordActive((prev) => !prev);
-				}, 500);
-			}, 1000);
-		}
-		return () => {
-			clearInterval(intervalId);
-		};
-	});
 	const sunActive = () => {
 		setSunActive(true);
-		setRecordActive(true);
 	};
 	const sunInactive = () => {
 		setSunActive(false);
-		setRecordActive(false);
 	};
 	return (
 		<div className={`container ${styles.container__get_to_know}`}>
@@ -59,7 +42,7 @@ const GetToKnow = ({ hrefId }) => {
 							</button>
 						</AnimationOnScroll>
 					</article>
-					<article className={styles.get_to_know__right_block}>
+					<artвсьоicle className={styles.get_to_know__right_block}>
 						<img
 							className={styles.get_to_know__camera_img}
 							src={camera}
@@ -86,14 +69,14 @@ const GetToKnow = ({ hrefId }) => {
 						</div>
 						<img
 							className={
-								!isRecordActive
+								!isSunActive
 									? styles.get_to_know__record
 									: `${styles.get_to_know__record} ${styles.record_active}`
 							}
 							src={record}
 							alt="recordImg"
 						/>
-					</article>
+					</artвсьоicle>
 				</div>
 
 				<div className={styles.bottom_content_wrapper}>
